@@ -1,0 +1,252 @@
+/* RESETS */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* GENERAL STYLING */
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  margin: 0;
+  display: flex;
+  background-color: #1d2d50;
+  transition: 0.5s ease-in;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+small {
+  font-weight: 300;
+  color: #456c8d;
+}
+
+/* BACKGROUND ANIMATION ELEMENT */
+
+.shape {
+  position: absolute;
+  clip-path: polygon(
+    0% 15%,
+    15% 15%,
+    15% 0%,
+    85% 0%,
+    85% 15%,
+    100% 15%,
+    100% 85%,
+    85% 85%,
+    85% 100%,
+    15% 100%,
+    15% 85%,
+    0% 85%
+  );
+  opacity: 0.7;
+}
+
+/***** LAYOUT *****/
+
+/* SIDE NAVIGATION */
+
+.container {
+  width: 400px;
+  height: 100vh;
+  flex-shrink: 0;
+}
+
+aside {
+  position: relative;
+  background-color: #222831;
+  color: #dbe6fd;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 5em;
+  width: 400px;
+  min-height: 100vh;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  font-weight: 600;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__list__item {
+  margin-bottom: 1em;
+}
+
+.nav__list__item:hover {
+  color: #b4846c;
+}
+
+.active {
+  color: #b4846c;
+}
+
+.footer__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.7em;
+}
+
+.footer__list__item a {
+  display: block;
+  background-color: #dbe6fd;
+  color: #1d2d50;
+  font-size: 1.5rem;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  line-height: 1.5;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.footer__list__item a:hover {
+  background-color: #b4846c;
+}
+
+/* MAIN */
+
+main {
+  max-width: 1700px;
+  margin: auto;
+  padding: 0 1.5em;
+  color: #dbe6fd;
+}
+
+/********
+ HEADER 
+ ********/
+
+header {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.header__title {
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.header__subtitle {
+  text-transform: uppercase;
+}
+
+/* NIGHT/DAY Toggle */
+
+.logo {
+  margin: 5em 0;
+}
+
+.planet {
+  position: relative;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  background-color: #ebf3fe;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  box-shadow: 0px 0px 40px 2px white;
+}
+
+.spots {
+  border-radius: 100%;
+  position: absolute;
+  transition: 0.2s ease-in-out;
+}
+
+.spots {
+  background-color: #ecf0f1;
+  box-shadow: inset -3px 3px 0 0 #95a5a6;
+}
+
+#spot1 {
+  height: 5px;
+  width: 5px;
+  left: 30px;
+  top: 20px;
+}
+
+#spot2 {
+  height: 20px;
+  width: 20px;
+  left: 10px;
+  top: 25px;
+}
+
+#spot3 {
+  height: 10px;
+  width: 10px;
+  left: 10px;
+  top: 10px;
+}
+
+.dissolveSpots {
+  opacity: 0;
+}
+
+.day {
+  background-color: #ffdb01;
+  box-shadow: 0px 0px 40px 15px white;
+}
+
+.dayBg {
+  background-color: #83a4af;
+}
+
+/* MAIN GENERAL STYLING */
+
+section {
+  max-width: 1000px;
+  margin: 2em auto;
+  font-weight: 400;
+}
+
+h2 {
+  margin: auto;
+  max-width: 600px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 3rem;
+  padding: 0.1em 0;
+  border-top: 2px dotted #dbe6fd;
+  border-bottom: 2px dotted #dbe6fd;
+  opacity: 0.7;
+  background-color: #222831;
+}
+.home {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.3rem;
+}
