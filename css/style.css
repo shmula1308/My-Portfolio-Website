@@ -6,8 +6,14 @@
   box-sizing: border-box;
 }
 
-h1 {
+h1,
+h2,
+p {
   margin: 0;
+}
+
+img {
+  max-width: 100%;
 }
 
 /* GENERAL STYLING */
@@ -148,7 +154,7 @@ main {
 
 header {
   text-align: center;
-  margin-top: 2em;
+  margin-top: 4em;
 }
 
 .header__title {
@@ -228,12 +234,11 @@ header {
 
 section {
   max-width: 1000px;
-  margin: 2em auto;
   font-weight: 400;
+  margin: auto;
 }
 
-h2 {
-  margin: auto;
+.section__title {
   max-width: 600px;
   text-align: center;
   font-weight: 300;
@@ -243,10 +248,59 @@ h2 {
   border-bottom: 2px dotted #dbe6fd;
   opacity: 0.7;
   background-color: #222831;
+  margin: 3em auto;
 }
 .home {
   width: 50%;
   margin: auto;
   text-align: center;
   font-size: 1.3rem;
+}
+
+/* PROJECTS */
+
+.projects__container {
+  max-width: 800px;
+  display: flex;
+  gap: 1.5em;
+  margin: auto;
+}
+
+.project {
+  position: relative;
+  cursor: pointer;
+}
+
+.project__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  opacity: 1;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  transition: 0.3s all ease-in-out;
+  text-shadow: 0 1px 0 #110d17, 0 -1px 0 #110d17, 1px 0 0 #110d17,
+    -1px 0 0 #110d17;
+}
+
+.project__img {
+  opacity: 0.4;
+  transition: 0.3s all ease-in-out;
+}
+
+.project:hover .project__title {
+  opacity: 0;
+}
+
+.project:hover .project__img {
+  opacity: 1;
+}
+
+.project__img {
+  border-radius: 4px;
 }
