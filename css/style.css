@@ -13,6 +13,7 @@ p {
 }
 
 img {
+  display: block;
   max-width: 100%;
 }
 
@@ -143,7 +144,7 @@ aside {
 
 main {
   max-width: 1700px;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 1.5em;
   color: #dbe6fd;
 }
@@ -170,7 +171,8 @@ header {
 /* NIGHT/DAY Toggle */
 
 .logo {
-  margin: 5em 0;
+  margin: 3em 0;
+  z-index: -1;
 }
 
 .planet {
@@ -235,7 +237,7 @@ header {
 section {
   max-width: 1000px;
   font-weight: 400;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .section__title {
@@ -246,7 +248,6 @@ section {
   padding: 0.1em 0;
   border-top: 2px dotted #dbe6fd;
   border-bottom: 2px dotted #dbe6fd;
-  opacity: 0.7;
   background-color: #222831;
   margin: 3em auto;
 }
@@ -260,7 +261,7 @@ section {
 /* PROJECTS */
 
 .projects__container {
-  max-width: 800px;
+  max-width: 1000px;
   display: flex;
   gap: 1.5em;
   margin: auto;
@@ -269,6 +270,8 @@ section {
 .project {
   position: relative;
   cursor: pointer;
+  overflow: hidden;
+  border-radius: 4px;
 }
 
 .project__title {
@@ -289,7 +292,7 @@ section {
 }
 
 .project__img {
-  opacity: 0.4;
+  opacity: 0.3;
   transition: 0.3s all ease-in-out;
 }
 
@@ -301,6 +304,22 @@ section {
   opacity: 1;
 }
 
+.project:hover .more-info {
+  top: 0;
+}
+
 .project__img {
+  border-radius: 4px;
+}
+
+/* MORE INFO OVERLAYS */
+
+.more-info {
+  position: absolute;
+  background-color: darkcyan;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease-in-out;
   border-radius: 4px;
 }
