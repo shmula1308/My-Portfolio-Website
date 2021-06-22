@@ -42,10 +42,30 @@ shapes.forEach((el, i, ra) => {
   );
 });
 
+// DAY/NIGHT Mode Switch
 document.querySelector(".planet").addEventListener("click", (ev) => {
   document.querySelector(".planet").classList.toggle("day");
   document
     .querySelectorAll(".spots")
     .forEach((spot) => spot.classList.toggle("dissolveSpots"));
   document.querySelector("body").classList.toggle("dayBg");
+});
+
+// Portfolio overlays
+const projects = document.querySelector(".projects__container");
+const overlay = document.querySelector(".overlay");
+
+// When user clicks the portfolio project thumbnail, overlay appears.
+projects.addEventListener("click", (event) => {
+  const project = event.target.closest(".project");
+  const overlay = project.querySelector(".overlay");
+  overlay.style.top = "0%";
+});
+
+// When use clicks the close button, overlay disappears.
+projects.addEventListener("click", (event) => {
+  if (event.target.closest(".closeBtn")) {
+    const overlay = event.target.parentElement.parentElement;
+    overlay.style.top = "100%";
+  }
 });
